@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Max Tinka</title>
+    <meta name="description" content="WDD131 - Dynamic Web Fundamentals by Max Tinka for my assignments.">
+    <meta name="author" content="Max Tinka">
+    <link rel="stylesheet" href="styles/base.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>WDD 131:Dynamic Web Fundamentals - Max Tinka</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/max-tinka-5a4320140/" target="_blank">LinkedIn Profile</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?id=p33&lang=eng#p33" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#final-project" target="_blank">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>HTML Basics</h2>
+            <img src="images/html2.jpg" alt="HTML Basics" width="300" height="200">
+            <p>Understanding HTML is a fundamental part of web development and this section covers the basics of HTML, including elements, attributes, and structure.</p>
+            <p>Useful Links:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
+                <li><a href="https://html.com/" target="_blank">HTML.com - Learn HTML</a></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>CSS Fundamentals</h2>
+            <img src="images/css1.jpg" alt="CSS Fundamentals" width="300" height="200">
+            <p>CSS is used to define styles for your web pages, including the design, layout and variations. This section introduces CSS, covering selectors, properties, and styling techniques.</p>
+            <p>Useful Links:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+                <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools - CSS Tutorial</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks - Tips and Tricks</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // JavaScript to dynamically populate the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+    </script>
+</body>
+</html>
