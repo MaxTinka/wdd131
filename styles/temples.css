@@ -20,6 +20,7 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
 .header {
     border-bottom: 1px solid #E2E8F0;
 }
@@ -73,9 +74,6 @@ main {
     max-width: 1200px; /* Limit the maximum width */
     margin: 0 auto; /* Center the main element */
     padding: 1rem; /* Add padding for spacing */
-}
-
-.container {
     display: grid; /* Enable CSS Grid */
     grid-template-columns: 1fr; /* Single column for mobile view */
     gap: 1rem; /* Space between grid items */
@@ -83,6 +81,9 @@ main {
 
 /* Media Query for larger screens */
 @media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    }
     .container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
     }
@@ -119,24 +120,9 @@ footer {
     padding: 1.5rem; /* Padding for footer */
     background: #4A90E2; /* Primary color for footer */
     color: #FFFFFF; /* White text for footer */
-} ```css
-    margin: 0 20px;
-    }
+    position: relative; /* Positioning for footer */
+}
 
-    main {
-        display: grid; /* Enable CSS Grid */
-        grid-template-columns: 1fr; /* Single column for mobile view */
-        gap: 1rem; /* Space between grid items */
-    }
-
-    figure {
-        margin: 0; /* Remove margin for figures */
-        text-align: center;
-        background: #D9E6F2; /* Light blue background for figures */
-        border-radius: 8px; /* Rounded corners */
-        padding: 1rem; /* Padding for figures */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for figures */
-    }
 /* Hamburger Animation */
 .hamburger.active .bar:nth-child(2) {
     opacity: 0; /* Hide the middle bar */
@@ -150,15 +136,21 @@ footer {
     transform: translateY(-8px) rotate(-45deg); /* Rotate the bottom bar */
 }
 
-    /* Media Query for larger screens */
-    @media (min-width: 768px) {
-        main {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-        }
+    position: relative;
+    padding: 1.5rem;
+}
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
     }
+}
 
-    footer {
-        position: relative;
-        padding: 1.5rem;
-    }
+/* Footer Styles */
+footer {
+    position: relative; /* Positioning for footer */
+    padding: 1.5rem; /* Padding for footer */
+    text-align: center; /* Center the footer text */
+    background: #4A90E2; /* Primary color for footer */
+    color: #FFFFFF; /* White text for footer */
 }
