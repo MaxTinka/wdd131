@@ -1,0 +1,32 @@
+/* temples-large.css */
+
+@media (min-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    figure {
+        flex: 1 1 calc(33.333% - 2rem); /* Three figures per row with space */
+        margin: 1rem;
+        background: #D9E6F2; /* Light blue background for figures */
+        border-radius: 8px; /* Rounded corners */
+        padding: 1rem; /* Padding for figures */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow for larger screens */
+    }
+
+    footer {
+        position: relative;
+        padding: 1.5rem;
+    }
+}
