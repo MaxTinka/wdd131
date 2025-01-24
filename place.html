@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
-    <title>Place Page</title> <!-- Title of the document -->
+    <title>Place Page</title> 
     
-    <!-- Link to the main CSS file -->
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Embed Roboto font -->
+    
+    <meta name="description" content="Explore the beautiful landscapes and cultural highlights of Uganda, including Mountain Rwenzori, Masindi, and Gulu. Discover the weather and featured places.">
+    <meta name="author" content="Max Tinka"> <!-- Author's name -->
     <link rel="stylesheet" href="styles/place.css"> 
-    
-    <!-- Link to the JavaScript file with defer attribute -->
     <script src="scripts/place.js" defer></script> 
 </head>
 <body>
@@ -38,7 +40,7 @@
                      sizes="(max-width: 600px) 100vw, 
                             (max-width: 1200px) 50vw, 
                             33vw" 
-                     alt="A beautiful view of a place" 
+                     alt="A beautiful view of a scenic landscape" 
                      class="hero-image">
             </picture>
         </section>
@@ -46,7 +48,7 @@
         <section>
             <h2>Weather ⛅</h2>
             <div class="weather-icon">
-                <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-svg">
+                <img src="images/weather-icon.svg" alt="Weather Icon representing current weather conditions" class="weather-svg">
             </div>
             <p id="windChill"></p> <!-- Element to display the wind chill factor -->
         </section>
@@ -70,9 +72,9 @@
         <section>
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="images/kabale.jpg" alt="Image of Place 1">
-                <img src="images/boy.jpeg" alt="Image of Place 2">
-                <img src="images/clan.jpeg" alt="Image of Place 3">
+                <img src="images/kabale.jpg" alt="A scenic view of Kabale, Uganda">
+                <img src="images/boy.jpeg" alt="A young boy in Uganda carrying water">
+                <img src="images/clan.jpeg" alt="A small community in Northern Uganda">
             </div>
         </section>
     </main>
