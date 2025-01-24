@@ -1,24 +1,23 @@
-/* temples-large.css */
-
 @media (min-width: 768px) {
     nav ul {
-        text-align: center;
+        text-align: center; /* Center the navigation items */
     }
 
     nav ul li {
-        display: inline-block;
-        margin: 0 20px;
+        display: inline-block; /* Display items inline */
+        margin: 0 20px; /* Space between items */
     }
 
     main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: flex; /* Use Flexbox for main content */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-around; /* Space items evenly */
+        align-items: stretch; /* Ensure items stretch to the same height */
     }
 
     figure {
         flex: 1 1 calc(33.333% - 2rem); /* Three figures per row with space */
-        margin: 1rem;
+        margin: 1rem; /* Margin for figures */
         background: #D9E6F2; /* Light blue background for figures */
         border-radius: 8px; /* Rounded corners */
         padding: 1rem; /* Padding for figures */
@@ -26,7 +25,10 @@
     }
 
     footer {
-        position: relative;
-        padding: 1.5rem;
+        position: relative; /* Positioning for footer */
+        padding: 1.5rem; /* Padding for footer */
+        text-align: center; /* Center the footer text */
+        background: #4A90E2; /* Primary color for footer */
+        color: #FFFFFF; /* White text for footer */
     }
 }

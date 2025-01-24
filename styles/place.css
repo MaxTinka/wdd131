@@ -1,0 +1,123 @@
+/* Global CSS Variables */
+:root {
+    --color-black: #000000;
+    --color-yellow: #FFD600;
+    --color-red: #FF0000;
+    --color-white: #ebeaee;
+    --color-gray: #333333;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white); /* Light background for contrast */
+    color: var(--color-gray); /* Dark text for readability */
+}
+
+header {
+    background: var(--color-black); /* Black header */
+    color: var(--color-yellow); /* Yellow text for contrast */
+    padding: 20px 0; /* Padding for white space */
+    text-align: center; /* Centered alignment */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Horizontal alignment */
+    margin: 0 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: var(--color-yellow); /* Yellow text for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: var(--color-red); /* Change link color to red on hover */
+}
+
+h1, h2, h3 {
+    color: var(--color-red); /* Red headings */
+    margin: 10px 0; /* Consistent margin for headings */
+}
+
+h2::after {
+    content: "⛅"; /* Weather icon as a pseudo-element */
+    font-size: 1.5em; /* Size of the icon */
+    margin-left: 10px; /* Space between heading and icon */
+}
+
+main {
+    padding: 20px; /* Padding for white space */
+}
+
+section {
+    margin-bottom: 20px; /* Space between sections */
+    background: var(--color-white); /* White background for sections */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Padding inside sections */
+}
+
+.gallery {
+    display: flex; /* Flexbox for gallery layout */
+    gap: 10px; /* Space between images */
+    flex-wrap: wrap; /* Wrap images on smaller screens */
+}
+
+.gallery img {
+    width: 100%; /* Responsive images */
+    max-width: 300px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.weather-icon {
+    font-size: 2em; /* Increase size of the weather icon */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+footer {
+    text-align: center; /* Centered footer */
+    padding: 10px 0; /* Padding for white space */
+    background: var(--color-black); /* Black footer */
+    color: var(--color-yellow); /* Yellow text for contrast */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0; /* Space between footer paragraphs */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically on smaller screens */
+        margin: 5px 0; /* Space between items */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack gallery images vertically */
+        align-items: center; /* Center images */
+    }
+}
+
+@media (min-width: 769px) {
+    h2 {
+        font-size: 2em; /* Larger heading size for larger screens */
+    }
+}
