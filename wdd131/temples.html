@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temples</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- Link to the main CSS file for mobile-first styles -->
+    <link rel="stylesheet" href="styles/temples.css">
+    
+    <!-- Link to the large screen CSS file with a media query -->
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+    
+    <!-- Link to the JavaScript file with defer attribute -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temples</h1>
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#old" class="nav-link">Old</a></li>
+                <li class="nav-item"><a href="#new" class="nav-link">New</a></li>
+                <li class="nav-item"><a href="#large" class="nav-link">Large</a></li>
+                <li class="nav-item"><a href="#small" class="nav-link">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Featured Temples</h2> <!-- Heading that matches the current menu selection -->
+        <div class="container"> 
+            <figure>
+                <img src="images/temple13.jpg" alt="Saltlake Temple, Utah">
+                <figcaption>Saltlake Temple, Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Temple2.jpeg" alt="BentonVille Temple, Arkansas">
+                <figcaption>BentonVille Temple, Arkansas</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Temple3.jpeg" alt="Belem Temple, Brazil">
+                <figcaption>Belem Temple, Brazil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple6.jpg" alt="Accra Temple, Ghana">
+                <figcaption>Accra Temple, Ghana</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple7.jpg" alt="Johannesburg Temple, South Africa">
+                <figcaption>Johannesburg Temple, South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple8.jpg" alt="Durban Temple, South Africa">
+                <figcaption>Durban Temple, South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple9.jpg" alt="Kinshasa Temple, Congo">
+                <figcaption>Kinshasa Temple, Congo</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple10.jpg" alt="Oakland Temple, California">
+                <figcaption>Oakland Temple, California</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple11.jpg" alt="Salt lake Temple, Utah">
+                <figcaption>Salt lake Temple, Utah</figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // JavaScript to dynamically populate the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+    </script>
+</body>
+</html>
