@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Place Page</title> <!-- Title of the document -->
+    
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="styles/place.css"> 
+    
+    <!-- Link to additional CSS file for media queries -->
+    <link rel="stylesheet" href="styles/media-queries.css"> 
+    
+    <!-- Link to the JavaScript file with defer attribute -->
+    <script src="scripts/place.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Place Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="place.html">Places</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Hero Image</h2>
+            <picture>
+                <source srcset="images/hero-small.webp 600w, 
+                                images/hero-medium.webp 1200w, 
+                                images/hero-large.webp 1800w" 
+                        type="image/webp">
+                <img src="images/hero-small.jpg" 
+                     srcset="images/hero-small.jpg 600w, 
+                             images/hero-medium.jpg 1200w, 
+                             images/hero-large.jpg 1800w" 
+                     sizes="(max-width: 600px) 100vw, 
+                            (max-width: 1200px) 50vw, 
+                            33vw" 
+                     alt="A beautiful view of a place" 
+                     class="hero-image">
+            </picture>
+        </section>
+
+        <section>
+            <h2>Weather ⛅</h2>
+            <div class="weather-icon">
+                <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-svg">
+            </div>
+            <p id="windChill"></p> <!-- Element to display the wind chill factor -->
+        </section>
+
+        <section>
+            <h2>Featured Places</h2>
+            <article>
+                <h3>Mountain Rwenzori</h3>
+                <p>This is a photo of a view of Mt. Rwenzori in Western Uganda.</p>
+            </article>
+            <article>
+                <h3>Masindi</h3>
+                <p>A photo of a young boy going to fetch water to use at home.</p>
+            </article>
+            <article>
+                <h3>Gulu</h3>
+                <p>A photo of a small community from Northern Uganda.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/kabale.jpg" alt="Image of Place 1">
+                <img src="images/boy.jpeg" alt="Image of Place 2">
+                <img src="images/clan.jpeg" alt="Image of Place 3">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // JavaScript to display the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+
+        // Static values for temperature and wind speed
+        const temperatureF = 30; // Temperature in Fahrenheit
+        const windSpeedMph = 10; // Wind speed in miles per hour
+
+        // Function to calculate wind chill
+        function calculateWindChill(temp, speed) {
+            return Math.round(35.74 + (0.6215 * temp) - (35.75 * Math.pow(speed, 0.16)) + (0.4275 * temp * Math.pow(speed, 0.16)));
+        }
+
+        // Check conditions for viable wind chill calculations
+        let windChill;
+        if ((temperatureF <= 50 && windSpeedMph > 3)) {
+            windChill = calculateWindChill(temperatureF, windSpeedMph);
+        } else {
+            windChill = "N/A"; // Not applicable if conditions are not met
+        }
+
+        // Display the wind chill factor in the Weather section
+        document.getElementById("windChill").textContent = `Wind Chill: ${windChill}°F`;
+    </script>
+</body>
+</html>
