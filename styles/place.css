@@ -60,64 +60,86 @@ main {
 }
 
 section {
-    margin-bottom: 20px; /* Space between sections */
-    background: var(--color-white); /* White background for sections */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 15px; /* Padding inside sections */
+    margin-bottom:  20px; /* Space between sections */
 }
 
 .gallery {
     display: flex; /* Flexbox for gallery layout */
     gap: 10px; /* Space between images */
-    flex-wrap: wrap; /* Wrap images on smaller screens */
+    flex-wrap: wrap; /* Wrap images to the next line if necessary */
 }
 
 .gallery img {
-    width: 100%; /* Responsive images */
-    max-width: 300px; /* Limit max width */
+    width: calc(33.33% - 10px); /* Responsive image width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners for images */
-}
-
-.weather-icon {
-    font-size: 2em; /* Increase size of the weather icon */
-    margin-bottom: 10px; /* Space below the icon */
 }
 
 footer {
-    text-align: center; /* Centered footer */
-    padding: 10px 0; /* Padding for white space */
     background: var(--color-black); /* Black footer */
     color: var(--color-yellow); /* Yellow text for contrast */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center; /* Centered alignment */
+    padding: 10px 0; /* Padding for white space */
 }
 
-footer p {
-    margin: 5px 0; /* Space between footer paragraphs */
+.weather-icon {
+    display: flex; /* Flexbox for icon alignment */
+    justify-content: left; 
+    margin: 10px 0; /* Space around the icon */
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block; /* Stack navigation items vertically on smaller screens */
-        margin: 5px 0; /* Space between items */
-    }
-
-    h2 {
-        font-size: 1.5em; /* Adjust heading size for smaller screens */
-    }
-
-    .gallery {
-        flex-direction: column; /* Stack gallery images vertically */
-        align-items: center; /* Center images */
-    }
+.weather-svg {
+    width: 50px; /* Fixed width for the weather icon */
+    height: auto; /* Maintain aspect ratio */
 }
+``` ```html
+        <section>
+            <h2>Local Cuisine</h2>
+            <p>Experience the rich flavors of Ugandan dishes such as Matoke, Luwombo, and Rolex.</p>
+        </section>
 
-@media (min-width: 769px) {
-    h2 {
-        font-size: 2em; /* Larger heading size for larger screens */
-    }
-}
+        <section>
+            <h2>Travel Tips</h2>
+            <ul>
+                <li>Always carry cash, as not all places accept cards.</li>
+                <li>Respect local customs and traditions.</li>
+                <li>Stay hydrated and use sunscreen when exploring outdoors.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // JavaScript to display the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+
+        // Static values for temperature and wind speed
+        const temperatureF = 30; // Temperature in Fahrenheit
+        const windSpeedMph = 10; // Wind speed in miles per hour
+
+        // Function to calculate wind chill
+        function calculateWindChill(temp, speed) {
+            return Math.round(35.74 + (0.6215 * temp) - (35.75 * Math.pow(speed, 0.16)) + (0.4275 * temp * Math.pow(speed, 0.16)));
+        }
+
+        // Check conditions for viable wind chill calculations
+        let windChill;
+        if ((temperatureF <= 50 && windSpeedMph > 3)) {
+            windChill = calculateWindChill(temperatureF, windSpeedMph);
+        } else {
+            windChill = "N/A"; // Not applicable if conditions are not met
+        }
+
+        // Display the wind chill factor in the Weather section
+        document.getElementById("windChill").textContent = `Wind Chill: ${windChill}°F`;
+    </script>
+</body>
+</html>
