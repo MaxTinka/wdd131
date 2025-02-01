@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filtered Temples</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- Link to the main CSS file for mobile-first styles -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    
+    <!-- Link to the large screen CSS file with a media query -->
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    
+    <!-- Link to the JavaScript file with defer attribute -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Filtered Temples</h1>
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#old" class="nav-link">Old</a></li>
+                <li class="nav-item"><a href="#new" class="nav-link">New</a></li>
+                <li class="nav-item"><a href="#large" class="nav-link">Large</a></li>
+                <li class="nav-item"><a href="#small" class="nav-link">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Featured Temples</h2> 
+        <div class="container"> 
+            <!-- Temple figures will be dynamically generated here -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // JavaScript to for the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+    </script>
+   </body>
+</html>
