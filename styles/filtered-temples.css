@@ -1,0 +1,104 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark gray text */
+}
+
+header {
+    background: #4A90E2; /* Primary color */
+    color: #FFFFFF; /* White text */
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space between hamburger and nav items */
+    align-items: center; /* Center items vertically */
+}
+
+.hamburger {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.nav-menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Positioning for dropdown */
+    background: #4A90E2; /* Match header color */
+    width: 100%; /* Full width */
+    top: 60px; /* Position below header */
+}
+
+.nav-menu.active {
+    display: flex; /* Show menu when active */
+}
+
+.nav-item {
+    padding: 1rem; /* Space around items */
+}
+
+.nav-link {
+    color: #FFFFFF; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+.container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 1rem; /* Space between items */
+    padding: 1rem; /* Padding for container */
+}
+
+.temple-figure {
+    background: #FFFFFF; /* White background for figures */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.temple-figure:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.temple-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+figcaption {
+    padding: 0.5rem; /* Padding for caption */
+    text-align: center; /* Center text */
+    font-size: 0.9rem; /* Smaller font size for captions */
+    color: #555; /* Darker gray for captions */
+}
+
+footer {
+    text-align: center; /* Center the footer text */
+    padding: 1.5rem; /* Padding for footer */
+    background: #4A90E2; /* Primary color for footer */
+    color: #FFFFFF; /* White text for footer */
+    position: relative; /* Positioning for footer */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex; /* Show menu in row on larger screens */
+        position: static; /* Reset position */
+        flex-direction: row; /* Align items in a row */
+    }
+
+    .nav-item {
+        padding: 0 1rem; /* Space around items */
+    }
+}
