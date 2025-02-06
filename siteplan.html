@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinka Foodhub Website Plan</title>
+    <link rel="stylesheet" href="siteplan.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>Tinka Foodhub Website Plan</h1>
+        <p>Plan for the online presence of Tinka Foodhub</p>
+    </header>
+
+    <section>
+        <h2>1. Site Name</h2>
+        <p><strong>Tinka Foodhub</strong></p>
+        <p>The name "Tinka Foodhub" reflects the restaurant’s focus on offering a diverse range of food from various cultures, with an emphasis on creating a warm, communal dining experience for everyone.</p>
+        <p><strong>Optional Domain Availability:</strong> tinkafoodhub.com</p>
+    </section>
+
+    <section>
+        <h2>2. Site Purpose</h2>
+        <p>The purpose of Tinka Foodhub's website is to provide customers with a complete online experience, including access to the menu, information about the restaurant, and the ability to make reservations.</p>
+        <p>The site will feature:</p>
+        <ul>
+            <li>A menu section showcasing the restaurant's offerings, including descriptions and pricing.</li>
+            <li>A contact page with the restaurant's location, phone number, and map.</li>
+            <li>A reservations system or form where customers can book a table.</li>
+            <li>An "About Us" section describing the history and philosophy behind Tinka Foodhub.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Scenarios</h2>
+        <p>Here are two common scenarios that a visitor might have when interacting with the website:</p>
+        <ul>
+            <li><strong>Scenario 1:</strong> "What are the restaurant's opening hours?"</li>
+            <li><strong>Scenario 2:</strong> "How can I book a reservation for my upcoming dinner?"</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Color Scheme</h2>
+        <p>The color scheme of the website will be warm and inviting, reflecting the restaurant’s cozy ambiance. Below are the two primary colors:</p>
+        <div class="color-scheme">
+            <p><strong>Primary Color:</strong> #c97b5b (Warm brown tone)</p>
+            <p>This color will be used for headings, navigation background, and accents throughout the site.</p>
+            <div class="color-example color1"></div>
+        </div>
+        <div class="color-scheme">
+            <p><strong>Secondary Color:</strong> #f4e1c1 (Soft cream color)</p>
+            <p>This color will be used for background areas, such as sections and footers, to create contrast with the primary color.</p>
+            <div class="color-example color2"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Typography</h2>
+        <p>The website will use the following fonts:</p>
+        <ul>
+            <li><strong>Heading Font:</strong> "Georgia" – Used for all main headings (h1, h2) to provide an elegant, sophisticated feel.</li>
+            <li><strong>Body Font:</strong> "Arial" – Used for all body text, paragraphs, and menu descriptions for readability.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>6. Wireframe</h2>
+        <p>Below are wireframe sketches for the website’s home page layout, showing both mobile and desktop views.</p>
+        <p><strong>Mobile View:</strong></p>
+        <img src="A_wireframe_sketch_of_a_restaurant_website_homepag.png" alt="Mobile wireframe sketch" width="300">
+        <p><strong>Desktop View:</strong></p>
+        <img src="A_wireframe_sketch_of_a_restaurant_website_homepag.png" alt="Desktop wireframe sketch" width="600">
+    </section>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Tinka Foodhub. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // JavaScript to for the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+    </script>
+   </body>
+</html>
