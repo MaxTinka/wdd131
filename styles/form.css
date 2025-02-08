@@ -1,0 +1,140 @@
+/* General Form Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a clean, readable font */
+    background-color: #F0F0F0; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #6f6a6ad4; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Consistent font size for readability */
+}
+
+h2 {
+    text-align: center;
+    color: #3a0904; /* Primary color for headings */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #333333; /* Dark text for good contrast */
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Focus effect for inputs */
+input:focus, select:focus, textarea:focus {
+    border-color: #0ab967; /* Highlight border on focus with primary color */
+    outline: none;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    background-color: #FF6F61; /* Primary color for the button */
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #D64F3A; /* Darker shade on hover */
+}
+
+/* Form Section Spacing */
+section {
+    margin-bottom: 30px; /* Space between sections */
+}
+
+/* Rating Stars Styling */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #25c771; /* Inactive star color */
+    cursor: pointer;
+    padding: 5px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold; /* Active and hover stars in gold */
+    transition: 0.3s ease-in-out;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Error Message Styling */
+.error {
+    color: #D32F2F; /* Red for error messages */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px; /* Slightly smaller heading on mobile */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button size for smaller screens */
+    }
+}
