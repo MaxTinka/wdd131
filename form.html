@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Product Review Form</h2>
+        <form id="reviewForm" action="review.html" method="get" onsubmit="return validateForm();">
+            
+            <label for="name">Your Name (Optional):</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- JavaScript will populate this -->
+            </select>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <label for="rating">Your Overall Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+            </select>
+
+            <label for="review">Written Review (Optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label>What Features Did You Find Useful? (Select All That Applies):</label>
+            <div>
+                <input type="checkbox" id="feature1" name="features" value="Fast Shipping">
+                <label for="feature1">Fast Shipping</label>
+            </div>
+            <div>
+                <input type="checkbox" id="feature2" name="features" value="Quality Product">
+                <label for="feature2">Quality Product</label>
+            </div>
+            <div>
+                <input type="checkbox" id="feature3" name="features" value="Affordable Price">
+                <label for="feature3">Affordable Price</label>
+            </div>
+            <div>
+                <input type="checkbox" id="feature4" name="features" value="Customer Support">
+                <label for="feature4">Customer Support</label>
+            </div>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // JavaScript for the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+
+        // JavaScript to populate the last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+    </script>
+
+</body>
+</html>
