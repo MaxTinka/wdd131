@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinka's Foodhub - About Us</title>
+    <title>Tinka's Foodhub - Home</title>
     <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
@@ -11,57 +11,35 @@
         <h1>Tinka's Foodhub</h1>
         <nav>
             <ul>
-                <li><a href="index.html" aria-label="Go to Home">Home</a></li>
-                <li><a href="menu.html" aria-label="View Menu">Menu</a></li>
-                <li><a href="reservations.html" aria-label="Make a Reservation">Reservations</a></li>
-                <li><a href="about.html" aria-label="Learn About Us">About Us</a></li>
-                <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="images/hero3.jpg" alt="hero image"></section>
-
-    <section>
-        <h2>About Us</h2>
-        <p>Tinka's Foodhub was founded with the vision of bringing diverse culinary experiences to our community.If you're looking for somewhere to eat out in Entebbe, we feature flavours from around the world and options to suit every budget. Whether you are looking for a coffee break or a more leisurely experience, we have something for everyone, from golden-fried chicken, crispy Italian pizzas to delisious ice-cream.
-        </p>
-        
-        <h3>Meet Our Team</h3>
-        <ul>
-            <li>
-                <strong>Chef Juan</strong> - Head Chef<br>
-                Chef Juan is a well experienced chef with lots of dishes from around the world,he has been in France, Italy and Spain, and he specializes in pizzas and Italian dishes.
-                <section class="hero">
-                    <img src="images/juan.jpg" alt="Chef Juan">
-            </li>
-            <li>
-                <strong>Manager Isabella</strong> - Restaurant Manager<br>
-                Miss Isabella is a devoted lady with a broad experience in human resource management, with hands on engagement to make sure there is full customer satisfaction at Tinka's Foodhub.
-                <section class="hero">
-                    <img src="images/manager3.jpg" alt="Miss Isabella">
-            </li>
-
-            <li>
-                <strong>Barista Max</strong> - Head Barista<br>
-                Max is our senior barista with exceptional skills in all types of beverages ranging from coffee,espressos and latte. .
-                <section class="hero">
-                    <img src="images/barista2.jpg" alt="Max"> 
-            </li>
-        </ul>
-        
-        <h3>Our Values</h3>
-        <p>We believe in quality, community, and sustainability. Our ingredients are sourced locally whenever possible, and we strive to create a positive impact in our community.</p>
-        
-        <h3>Follow Us</h3>
-        <p>Stay connected with us on social media:</p>
-        <ul>
-            <li><a href="#" aria-label="Follow us on Facebook">Facebook</a></li>
-            <li><a href="#" aria-label="Follow us on Instagram">Instagram</a></li>
-            <li><a href="#" aria-label="Follow us on Twitter">Twitter</a></li>
-        </ul>
+        <img src="images/hero3.jpg" alt="Delicious food served at Tinka's Foodhub" class="hero-image">
+        <h2>Welcome to Tinka Foodhub!</h2>
+        <p>Your favorite place for delicious meals and great company.</p>
+        <a href="menu.html" class="button">View Menu</a>
     </section>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Tinka's Foodhub is dedicated to providing you with the best dining experience. Our menu features a variety of dishes made from fresh ingredients, ensuring that every meal is a delight.</p>
+            <p>Whether you're looking for a quick bite or a full-course meal, we have something for everyone!</p>
+        </section>
+
+        <section>
+            <h2>Join Us!</h2>
+            <p>We invite you to make a reservation and enjoy a meal with us. Click below to reserve your table.</p>
+            <a href="reservations.html" class="button">Make a Reservation</a>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
@@ -76,6 +54,5 @@
         const lastModified = document.lastModified;
         document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
     </script>
-
 </body>
 </html>
