@@ -17,7 +17,7 @@ body {
 header {
     background-color: #333; /* Dark background for header */
     color: #fff; /* White text color */
-    padding: 20px 0; /* Padding for header */
+    padding: 20px; /* Padding for header */
     text-align: center; /* Centered text */
 }
 
@@ -106,7 +106,7 @@ footer {
     background-color: #333; /* Dark background for footer */
     color: #fff; /* White text color */
     text-align: center; /* Centered text */
-    padding: 20px 0; /* Padding for footer */
+    padding: 20px; /* Padding for footer */
     position: relative; /* Normal flow */
     width: 100%; /* Full width */
 }
@@ -123,6 +123,7 @@ input, textarea {
     border: 1px solid #ccc; /* Border for input fields */
     border-radius: 5px; /* Rounded corners */
     font-size: 16px; /* Font size for input fields */
+    width: 100%; /* Full width for input fields */
 }
 
 /* Responsive Design */
@@ -133,5 +134,23 @@ input, textarea {
 
     .hero {
         padding: 40px 10px; /* Reduced padding for hero section */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Spacing between navigation items */
+    }
+}
+
+@media (min-width: 769px) {
+    .hero {
+        padding: 80px 40px; /* Increased padding for larger screens */
+    }
+
+    .button {
+        font-size: 1.2rem; /* Larger button text for better visibility */
     }
 }
