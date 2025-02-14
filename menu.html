@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinka's Foodhub - Menu</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>Tinka's Foodhub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/hero3.jpg" alt="hero image">
+    
+    </section>
+
+    <main>
+        <section>
+            <h2>Our Menu</h2>
+            <p>Explore some of our most loved delicious offerings!</p>   
+            <ul id="menuList"></ul>
+        </section>
+    </main>
+    <script src="scripts/siteplan.js"></script>
+
+ <footer>
+            <p>&copy; <span id="currentyear"></span> Max Tinka. All rights reserved. Based in Uganda.</p>
+            <p id="lastModified"></p>
+    
+        <script>
+            // JavaScript for the current year
+            const currentYear = new Date().getFullYear();
+            document.getElementById("currentyear").textContent = currentYear;
+    
+            // JavaScript to populate the last modified date
+            const lastModified = document.lastModified;
+            document.getElementById("lastModified").textContent = "Last modified: " + lastModified;
+        </script>
+        </footer>
+    </body>
+    </html>        

@@ -1,0 +1,137 @@
+/* General reset for all browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Default font family */
+    line-height: 1.6; /* Improved readability */
+    background-color: #ffffff; /* White background color */
+    color: #333; /* Dark text color for contrast */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Padding for header */
+    text-align: center; /* Centered text */
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center; /* Center text */
+    padding: 60px 20px; /* Padding for hero section */
+    background-image: url('images/hero-bg.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    color: #fff; /* White text color */
+    margin-bottom: 20px; /* Space below hero section */
+    position: relative; /* Position for overlay */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Place overlay below text */
+}
+
+.hero h2, .hero p {
+    position: relative; /* Position text above overlay */
+    z-index: 2; /* Ensure text is above overlay */
+}
+
+/* Button styles */
+.button {
+    display: inline-block; /* Inline block for button */
+    padding: 10px 20px; /* Padding for button */
+    background: #ff7f50; /* Coral color for buttons */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background: #ff6347; /* Darker coral button color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center navigation items */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    margin: 0 15px; /* Spacing between navigation items */
+}
+
+nav a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for clickable area */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+    color: #fff; /* Keep text color white */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Padding for main content */
+    max-width: 1200px; /* Maximum width for readability */
+    margin: auto; /* Center main content */
+    background-color: #fff; /* White background for main content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding for footer */
+    position: relative; /* Normal flow */
+    width: 100%; /* Full width */
+}
+
+/* Form styles */
+form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Space between form elements */
+}
+
+input, textarea {
+    padding: 10px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input fields */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .hero {
+        padding: 40px 10px; /* Reduced padding for hero section */
+    }
+}
